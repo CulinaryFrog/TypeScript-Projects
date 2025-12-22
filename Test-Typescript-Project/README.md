@@ -1,26 +1,110 @@
-Test project using 
+ A small test full-stack application modeling how applicants apply to programs and how applications are reviewed.
 
-backend: 
 
-postgres, Typescript
-
-frontend:
-
-Typescript (react + vite)
-
-  
-  Current functionality:
+ ### **Current functionality**:
     
-    -Can check current submissions per program (using program id for url).
+-Can check current submissions per program.
   
   <img width="456" height="306" alt="image" src="https://github.com/user-attachments/assets/8d826fb0-e436-4f5b-8c63-cec6018d4998" />
     
-    -Can submit an example application
-
+-Can submit an example application
 <img width="620" height="192" alt="image" src="https://github.com/user-attachments/assets/21d9cfb2-cd9e-4bbf-9d03-2a847311a717" />
-
   Todo:
+- have page to change status of applications. 
+- have page to put in custom values for applications
+### Backend
+- Express
+- TypeScript (Node.js)
+- PostgreSQL
+- `pg` (Postgres client)
+### Frontend
+- React
+- TypeScrip
+- Vite
+- Fetch API
+##  Repository Structure
+```
+.
+├── backend/
+│   ├── src/
+│   │   ├── server.ts
+│   │   ├── db.ts
+│   │   └── routes/
+│   │       ├── applications.ts
+│   │       └── programs.ts
+│   ├── sql/
+│   │   ├── 001_schema.sql
+│   │   └── 002_seed.sql
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── api.ts
+│   │   └── main.tsx
+│   ├── index.html
+│   └── package.json
+│
+└── README.md
+```
+---
+Schema is defined in:
+```
+backend/sql/001_schema.sql
+```
+### Backend Setup
+```bash
+cd backend
+npm install```
+
+Create a `.env` file:
+```env
+DATABASE_URL=postgres://username:password@localhost:5432/aidkit
+PORT=3000
+```
+Create and apply seed to the database:
+```bash
+createdb aidkit
+psql -d aidkit -f sql/001_schema.sql
+psql -d aidkit -f sql/002_seed.sql
+```
+Run the backend:
+```bash
+npm run dev
+```
+Backend runs at:
+```
+http://localhost:3000
+```
+---
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Frontend runs at:
+```
+http://localhost:5173
+```
+---
+##  API Endpoints
+
+### Programs
+
+- `GET /programs`  
+    Fetch all programs
+- `POST /programs`  
+    Create a new program
+### Applications
+
+- `POST /applications`  
+    Submit a new application
     
-    - have page to change status of applications.
+- `GET /programs/:programId/applications`  
+    Fetch applications for a program
     
-    - have page to put in custom values for applications
+- `PATCH /applications/:applicationId/status`  
+    Approve or reject an application
+    

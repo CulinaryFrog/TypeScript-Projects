@@ -80,3 +80,4 @@ coverage/
 # Misc
 # --------------------
 *.tgz
+.obsidian/
