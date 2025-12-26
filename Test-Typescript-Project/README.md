@@ -4,10 +4,13 @@
  ### **Current functionality**:
     
 -Can check current submissions.
+
 -Can submit an example application.
+
 -Can approve/reject applications.
 
-<img width="1660" height="1320" alt="image" src="https://github.com/user-attachments/assets/e5e046bf-b6bd-429a-bdd9-d7b809ac4610" />
+<img width="725" height="682" alt="image" src="https://github.com/user-attachments/assets/e8096a6c-2d8e-4328-a1a9-984bc30eda4e" />
+
 
 
 Todo:
