@@ -1,16 +1,14 @@
- A small test full-stack application modeling how applicants apply to programs and how applications are reviewed.
+ A small test full-stack application where applications can be submitted to programs by applicants. Applications can then be viewed and accepted/rejected.
 
 
  ### **Current functionality**:
     
--Can check current submissions per program.
-  
-  <img width="456" height="306" alt="image" src="https://github.com/user-attachments/assets/8d826fb0-e436-4f5b-8c63-cec6018d4998" />
-    
--Can submit an example application
-<img width="620" height="192" alt="image" src="https://github.com/user-attachments/assets/21d9cfb2-cd9e-4bbf-9d03-2a847311a717" />
-  Todo:
-- have page to change status of applications. 
+-Can check current submissions.
+-Can submit an example application.
+-Can approve/reject applications.
+
+Todo:
+- paginate view 
 - have page to put in custom values for applications
 ### Backend
 - Express
