@@ -6,7 +6,10 @@ export async function createApplication(data: any) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  if (!res.ok) throw new Error((await res.json()).error);
+  if (!res.ok) 
+  {
+    throw new Error((await res.json()).error);
+  }
 }
 
 export async function fetchApplications(programId: number) {

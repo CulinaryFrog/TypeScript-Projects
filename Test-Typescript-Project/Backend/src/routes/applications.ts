@@ -49,7 +49,7 @@ router.post("/", async (req, res) =>
     catch (err: any)
     {
         await client.query("ROLLBACK");
-        if (err.code === "2305") //unique_violation code for PostgreSQL (23 is integrity viol, 505 is the specific)
+        if (err.code === "2305") //unique_violation code for PostgreSQL (23 is integrity violation, 505 is the specific)
         {
             return res.status(409).json({ error: "Applicant already has an application for this program" });
         }

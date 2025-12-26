@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import applicationsRouter from "./routes/applications";
 import programsRouter from "./routes/programs";
 
@@ -7,7 +8,10 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-
+app.use(cors({
+    origin: "http://localhost:5173"
+  }
+))
 // Routes
 app.use("/applications", applicationsRouter);
 app.use("/programs", programsRouter);
