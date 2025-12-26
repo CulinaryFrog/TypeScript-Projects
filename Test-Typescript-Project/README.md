@@ -7,6 +7,9 @@
 -Can submit an example application.
 -Can approve/reject applications.
 
+<img width="1660" height="1320" alt="image" src="https://github.com/user-attachments/assets/e5e046bf-b6bd-429a-bdd9-d7b809ac4610" />
+
+
 Todo:
 - paginate view 
 - have page to put in custom values for applications
